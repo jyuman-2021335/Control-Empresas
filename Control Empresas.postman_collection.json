@@ -1,0 +1,311 @@
+{
+	"info": {
+		"_postman_id": "ed56c171-e1d0-4e79-ab06-ab752b652dc5",
+		"name": "Control Empresas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Empresa",
+			"item": [
+				{
+					"name": "GET Empresa",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/empresa/mostrar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"empresa",
+								"mostrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Empresa",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Monkeys Coffe\",\r\n    \"correo\": \"mk@gmail.com\",\r\n    \"password\": \"123456\",\r\n    \"tipo\": \"Restaurante\",\r\n    \"rol\": \"ROL_EMPRESA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/empresa/agregar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"empresa",
+								"agregar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Empresa",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDA1NzliZDAwNTdhZWIxMWJmYTQ0ZjciLCJpYXQiOjE2NzgwODA0NjEsImV4cCI6MTY3ODA5ODQ2MX0.FhBkZKdDUrvgQ8A_PhT25hRwTCNZW33u53-UslDjmz0",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Monkeys CoffeShop\",\r\n    \"tipo\": \"Cafeteria\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/empresa/editar/640579bd0057aeb11bfa44f7",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"empresa",
+								"editar",
+								"640579bd0057aeb11bfa44f7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Empresa",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDA1NzliZDAwNTdhZWIxMWJmYTQ0ZjciLCJpYXQiOjE2NzgwODA0NjEsImV4cCI6MTY3ODA5ODQ2MX0.FhBkZKdDUrvgQ8A_PhT25hRwTCNZW33u53-UslDjmz0",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/api/empresa/eliminar/640579bd0057aeb11bfa44f7",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"empresa",
+								"eliminar",
+								"640579bd0057aeb11bfa44f7"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Sucursales",
+			"item": [
+				{
+					"name": "GET Sucursal",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDA1NzU2ZjBkYTE3YmJmZWJjMTBhZTYiLCJpYXQiOjE2NzgwNzkzNDcsImV4cCI6MTY3ODA5NzM0N30.LYLVTP0aVvcVOY4rbIkuIQcsD9uzzqEzp06jCsO4SBg",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/api/sucursal/mostrar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"sucursal",
+								"mostrar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Sucursal",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDA1NzliZDAwNTdhZWIxMWJmYTQ0ZjciLCJpYXQiOjE2NzgwODA0NjEsImV4cCI6MTY3ODA5ODQ2MX0.FhBkZKdDUrvgQ8A_PhT25hRwTCNZW33u53-UslDjmz0",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"municipio\": \"San Jose Pinula\",\r\n    \"direccion\": \"3 av Calle 4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/sucursal/agregar",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"sucursal",
+								"agregar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Sucursal",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDA1NzliZDAwNTdhZWIxMWJmYTQ0ZjciLCJpYXQiOjE2NzgwODA0NjEsImV4cCI6MTY3ODA5ODQ2MX0.FhBkZKdDUrvgQ8A_PhT25hRwTCNZW33u53-UslDjmz0",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"municipio\": \"San Raymundo\",\r\n    \"direccion\": \"3 av Calle 4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/sucursal/editar/64057a200057aeb11bfa4502",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"sucursal",
+								"editar",
+								"64057a200057aeb11bfa4502"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Sucursal",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDA1NzliZDAwNTdhZWIxMWJmYTQ0ZjciLCJpYXQiOjE2NzgwODA0NjEsImV4cCI6MTY3ODA5ODQ2MX0.FhBkZKdDUrvgQ8A_PhT25hRwTCNZW33u53-UslDjmz0",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/api/sucursal/eliminar/64057a200057aeb11bfa4502",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"sucursal",
+								"eliminar",
+								"64057a200057aeb11bfa4502"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Asignar Sucursal",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NDA1NzliZDAwNTdhZWIxMWJmYTQ0ZjciLCJpYXQiOjE2NzgwODA0NjEsImV4cCI6MTY3ODA5ODQ2MX0.FhBkZKdDUrvgQ8A_PhT25hRwTCNZW33u53-UslDjmz0",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/api/sucursal/asignar/64057a200057aeb11bfa4502",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"sucursal",
+								"asignar",
+								"64057a200057aeb11bfa4502"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"correo\": \"mk@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
